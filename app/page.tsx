@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Hero } from '@/components/Hero';
+import { HowItWorks } from '@/components/HowItWorks';
 import { SimulatorDemo } from '@/components/SimulatorDemo';
 import { ChannelGraph } from '@/components/ChannelGraph';
 import { DailyBriefings } from '@/components/DailyBriefings';
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <main>
       <Hero onOpenDownload={() => setDownloadModalOpen(true)} />
+      <HowItWorks />
       <SimulatorDemo />
       <ChannelGraph />
       <DailyBriefings />
@@ -29,3 +31,4 @@ export default function Home() {
     </main>
   );
 }
+

@@ -9,45 +9,35 @@ module.exports = {
     extend: {
       colors: {
         studio: {
-          bg: '#FAF9F6',
+          bg: '#FAFAFA',
           surface: '#FFFFFF',
-          card: '#F4F1EB',
-          subtle: '#EDE8DF',
-          border: '#E2DCD2',
-          dark: '#111827',
-          darkSurface: '#1F2937',
+          card: '#FFFFFF',
+          subtle: '#F1F5F9',
+          border: '#E2E8F0',
+          dark: '#0F172A',
+          darkSurface: '#1E293B',
         },
-        ruby: {
-          50: '#FFF1F2',
-          100: '#FFE4E6',
-          500: '#F43F5E',
-          600: '#E11D48',
-          700: '#BE123C',
+        brand: {
+          50: '#FEF2F2',
+          100: '#FEE2E2',
+          500: '#EF4444',
+          600: '#DC2626',
+          700: '#B91C1C',
         },
-        jade: {
-          50: '#ECFDF5',
-          100: '#D1FAE5',
-          500: '#10B981',
-          600: '#059669',
-          700: '#047857',
-        },
-        amber: {
-          50: '#FFFBEB',
-          100: '#FEF3C7',
-          500: '#F59E0B',
-          600: '#D97706',
-        }
       },
       fontFamily: {
-        sans: ['var(--font-roboto)', 'Roboto', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+        sans: ['var(--font-inter)', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        mono: ['var(--font-mono)', 'JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
       },
       boxShadow: {
-        'studio-sm': '0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02)',
-        'studio': '0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02)',
-        'studio-lg': '0 12px 36px -4px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03)',
+        'subtle': '0 1px 2px 0 rgba(0, 0, 0, 0.03)',
+        'card': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.03)',
+        'float': '0 10px 32px -4px rgba(0, 0, 0, 0.08)',
+        'studio': '0 0 0 1px rgba(0, 0, 0, 0.06), 0 2px 8px -2px rgba(0, 0, 0, 0.04)',
       },
     },
   },
   plugins: [],
 }
+
+

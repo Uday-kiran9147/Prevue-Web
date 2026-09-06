@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { MdStar } from 'react-icons/md';;
+import { MdStar } from 'react-icons/md';
 
 export const Testimonials: React.FC = () => {
   const testimonials = [
@@ -9,48 +9,48 @@ export const Testimonials: React.FC = () => {
       name: "Marcus Vance",
       channel: "Vance Media Lab (840K Subs)",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop&crop=faces",
-      quote: "Before Prevue, we always lost 35% of viewers by second 0:15 without knowing why. The 1-click prescriptive fixes completely changed our scriptwriting workflow.",
-      metric: "+28% Retention at 0:30",
+      quote: "Before Prevue, we lost ~35% of viewers by second 0:15 without understanding the psychological cause. Restructuring the hook loop before filming added 28% to our 30-second hold rate.",
+      metric: "+28% 0:30 Retention",
       rating: 5
     },
     {
       name: "Elena Rostova",
-      channel: "Tech Architecture Daily (410K Subs)",
+      channel: "Tech Architecture (410K Subs)",
       avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=faces",
-      quote: "The Hook Score radial gauge gives our editing team an objective benchmark before filming a single frame. It's the most valuable creator tool on my phone.",
-      metric: "3.4x Outlier Views",
+      quote: "The Hook Score gives our editing team an objective pacing standard before filming a single frame. It eliminated the throat-clearing fluff we used to leave in our video intros.",
+      metric: "3.4x Outlier Multiplier",
       rating: 5
     },
     {
       name: "David K.",
       channel: "Explain It Simply (1.2M Subs)",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces",
-      quote: "Connecting our YouTube Data API baseline showed us our topic clusters and why certain hooks consistently triggered Jade Outlier performance.",
-      metric: "9.6 Avg Hook Score",
+      quote: "Calibrating against our actual channel median showed us why certain intro structures reliably perform. It is a permanent step in our pre-production checklist.",
+      metric: "9.4 Avg Hook Score",
       rating: 5
     }
   ];
 
   return (
-    <section className="py-20 bg-white border-y border-slate-200/80">
+    <section className="py-16 md:py-24 bg-slate-50/50 border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center space-y-3 mb-12">
-          <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-xs font-semibold">
-            <span>Verified Retention Impact</span>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/80 text-slate-800 text-xs font-semibold shadow-subtle">
+            <span>Creator Case Studies</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-black tracking-tight">
-            Trusted by Creators With 10M+ Combined Subscribers
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+            Used Across 10M+ Combined YouTube Subscribers
           </h2>
-          <p className="text-slate-600 text-base">
-            See how high-performing YouTube channels use Prevue's Pre-Flight Simulator before every production.
+          <p className="text-slate-600 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+            See how high-retention channels use Prevue to test and optimize hooks before every production shoot.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="bg-studio-card rounded-2xl p-6 border border-studio-border shadow-studio flex flex-col justify-between"
+              className="bg-white rounded-xl p-6 sm:p-7 border border-slate-200/80 shadow-subtle flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -59,24 +59,24 @@ export const Testimonials: React.FC = () => {
                       <MdStar key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <span className="text-xs font-mono font-bold text-red-700 bg-red-100 px-2 py-0.5 rounded">
+                  <span className="text-xs font-mono font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded">
                     {t.metric}
                   </span>
                 </div>
-                <p className="text-slate-700 text-sm italic leading-relaxed">
+                <p className="text-slate-700 text-xs sm:text-sm leading-relaxed font-normal">
                   "{t.quote}"
                 </p>
               </div>
 
-              <div className="flex items-center gap-3 pt-6 mt-4 border-t border-slate-200/80">
+              <div className="flex items-center gap-3 pt-5 mt-5 border-t border-slate-100">
                 <img
                   src={t.avatar}
                   alt={t.name}
-                  className="w-10 h-10 rounded-full object-cover border border-slate-200"
+                  className="w-9 h-9 rounded-full object-cover border border-slate-200"
                 />
                 <div>
-                  <h4 className="text-xs font-bold text-black">{t.name}</h4>
-                  <p className="text-[11px] text-slate-500">{t.channel}</p>
+                  <h4 className="text-xs font-bold text-slate-900">{t.name}</h4>
+                  <p className="text-[11px] text-slate-500 font-mono">{t.channel}</p>
                 </div>
               </div>
             </div>
@@ -86,3 +86,5 @@ export const Testimonials: React.FC = () => {
     </section>
   );
 };
+
+

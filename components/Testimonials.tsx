@@ -32,16 +32,18 @@ export const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-slate-50/50 border-b border-slate-200/80">
+    <section id="customers" className="py-20 md:py-28 bg-[#FAFAFA] border-b border-neutral-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center space-y-3 mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/80 text-slate-800 text-xs font-semibold shadow-subtle">
+        
+        {/* Section Header */}
+        <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-neutral-800 text-xs font-semibold shadow-subtle">
             <span>Creator Case Studies</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-950 tracking-tight">
             Used Across 10M+ Combined YouTube Subscribers
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-neutral-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             See how high-retention channels use Prevue to test and optimize hooks before every production shoot.
           </p>
         </div>
@@ -50,7 +52,7 @@ export const Testimonials: React.FC = () => {
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl p-6 sm:p-7 border border-slate-200/80 shadow-subtle flex flex-col justify-between"
+              className="bg-white rounded-2xl sm:rounded-3xl p-7 sm:p-8 border border-neutral-200/80 shadow-subtle flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
@@ -59,32 +61,34 @@ export const Testimonials: React.FC = () => {
                       <MdStar key={i} className="w-4 h-4 fill-current" />
                     ))}
                   </div>
-                  <span className="text-xs font-mono font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded">
+                  <span className="text-xs font-mono font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full">
                     {t.metric}
                   </span>
                 </div>
-                <p className="text-slate-700 text-xs sm:text-sm leading-relaxed font-normal">
+                <p className="text-neutral-700 text-xs sm:text-sm leading-relaxed font-normal">
                   "{t.quote}"
                 </p>
               </div>
 
-              <div className="flex items-center gap-3 pt-5 mt-5 border-t border-slate-100">
+              <div className="flex items-center gap-3 pt-5 mt-5 border-t border-neutral-100">
                 <img
                   src={t.avatar}
                   alt={t.name}
-                  className="w-9 h-9 rounded-full object-cover border border-slate-200"
+                  className="w-10 h-10 rounded-full object-cover border border-neutral-200 shadow-sm"
                 />
                 <div>
-                  <h4 className="text-xs font-bold text-slate-900">{t.name}</h4>
-                  <p className="text-[11px] text-slate-500 font-mono">{t.channel}</p>
+                  <h4 className="text-xs font-bold text-neutral-950">{t.name}</h4>
+                  <p className="text-[11px] text-neutral-400 font-mono">{t.channel}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
 };
+
 
 

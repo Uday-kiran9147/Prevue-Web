@@ -1,7 +1,14 @@
 import type { Metadata } from 'next';
-import { Inter, JetBrains_Mono } from 'next/font/google';
+import { Plus_Jakarta_Sans, Inter, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { ClientLayoutWrapper } from '@/components/ClientLayoutWrapper';
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-jakarta',
+  weight: ['400', '500', '600', '700', '800'],
+});
 
 const inter = Inter({
   subsets: ['latin'],
@@ -16,12 +23,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Prevue — YouTube Creator Intelligence & Pre-Flight Simulator',
-  description: 'Simulate YouTube retention before you film. Detect 0:00–0:30 drop-off hazards, calculate your Hook Score (0–10), and get prescriptive script fixes.',
-  keywords: ['YouTube retention simulator', 'hook score', 'YouTube creator intelligence', 'script retention', 'Prevue app'],
+  title: 'Prevue — YouTube Script Retention Intelligence & Hook Simulator',
+  description: 'Simulate 0:00–0:30 audience retention before you film. Prevue diagnoses script drop-off hazards, calibrates speech velocity, and engineers high-hold hooks.',
+  keywords: ['YouTube retention simulator', 'hook score', 'YouTube creator intelligence', 'script retention', 'Prevue app', 'teleprompter pacing'],
   openGraph: {
-    title: 'Prevue — YouTube Creator Intelligence & Pre-Flight Simulator',
-    description: 'Stop guessing your first 30 seconds. Run your YouTube script through Prevue’s retention hazard simulator.',
+    title: 'Prevue — YouTube Script Retention Intelligence',
+    description: 'Stop guessing your first 30 seconds. Prevue simulates YouTube script retention before you press record.',
     url: 'https://prevue.app',
     siteName: 'Prevue',
     type: 'website',
@@ -34,8 +41,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable} ${jetbrainsMono.variable}`}>
-      <body className="bg-[#FAFAFA] text-slate-900 antialiased selection:bg-slate-900 selection:text-white min-h-screen flex flex-col font-sans">
+    <html lang="en" className={`scroll-smooth ${jakarta.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
+      <body className="bg-white text-neutral-900 antialiased selection:bg-neutral-900 selection:text-white min-h-screen flex flex-col font-sans">
         <ClientLayoutWrapper>
           {children}
         </ClientLayoutWrapper>
@@ -43,4 +50,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 

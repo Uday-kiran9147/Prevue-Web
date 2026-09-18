@@ -167,11 +167,11 @@ export default function PrivacyPolicyPage() {
               <p className="text-xs text-slate-500">Our legal and compliance team is available to help.</p>
             </div>
             <a
-              href="mailto:privacy@prevue.app"
+              href="mailto:thehustler.dev@gmail.com"
               className="px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold flex items-center gap-1.5 transition-colors shadow-sm"
             >
               <MdMail className="w-3.5 h-3.5" />
-              <span>privacy@prevue.app</span>
+              <span>thehustler.dev@gmail.com</span>
             </a>
           </div>
         </div>

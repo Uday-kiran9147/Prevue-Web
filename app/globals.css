@@ -4,18 +4,52 @@
 
 @layer base {
   body {
-    font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: var(--font-jakarta), var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background-color: #FAFAFA;
     color: #0F172A;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    letter-spacing: -0.011em;
+    letter-spacing: -0.012em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    letter-spacing: -0.03em;
+    font-family: var(--font-jakarta), var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.035em;
+    font-weight: 700;
   }
+}
+
+/* Prevue Studio Mesh & Hero Gradient (Dark Slate + YouTube Red/Crimson + Emerald Hold) */
+.mesh-gradient-prevue-hero {
+  background: 
+    radial-gradient(at 15% 20%, rgba(239, 68, 68, 0.75) 0px, transparent 55%),
+    radial-gradient(at 85% 15%, rgba(15, 23, 42, 0.95) 0px, transparent 60%),
+    radial-gradient(at 50% 50%, rgba(16, 185, 129, 0.6) 0px, transparent 55%),
+    radial-gradient(at 20% 85%, rgba(185, 28, 28, 0.85) 0px, transparent 60%),
+    radial-gradient(at 80% 85%, rgba(30, 41, 59, 0.95) 0px, transparent 55%),
+    linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #020617 100%);
+  background-size: 140% 140%;
+}
+
+.mesh-gradient-prevue-silk {
+  background:
+    radial-gradient(circle at 75% 25%, rgba(239, 68, 68, 0.7), transparent 45%),
+    radial-gradient(circle at 25% 75%, rgba(16, 185, 129, 0.65), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 0.8), transparent 60%),
+    linear-gradient(135deg, #0f172a 0%, #1e293b 60%, #090d16 100%);
+}
+
+.mesh-gradient-prevue-device {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(239, 68, 68, 0.65), transparent 50%),
+    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.6), transparent 55%),
+    radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.8), transparent 60%),
+    linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #020617 100%);
+}
+
+/* Two-tone typography highlight helper */
+.text-dimmed {
+  color: #94A3B8;
 }
 
 /* Hairline borders & studio utilities */
@@ -27,6 +61,19 @@
   border-color: rgba(15, 23, 42, 0.08);
 }
 
+/* Pill buttons & badges */
+.btn-pill-primary {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 rounded-full bg-slate-900 text-white text-xs sm:text-sm font-medium hover:bg-slate-800 transition-all active:scale-[0.98] shadow-sm;
+}
+
+.btn-pill-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-6 py-2.5 sm:py-3 rounded-full bg-white text-slate-800 text-xs sm:text-sm font-medium border border-slate-200 hover:bg-slate-50 transition-all active:scale-[0.98] shadow-subtle;
+}
+
+.badge-pill {
+  @apply inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 text-xs font-medium text-slate-800 shadow-subtle;
+}
+
 /* Custom scrollbars */
 ::-webkit-scrollbar {
   width: 5px;
@@ -34,7 +81,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F8FAFC;
+  background: #FAFAFA;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -45,5 +92,3 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #94A3B8;
 }
-
-

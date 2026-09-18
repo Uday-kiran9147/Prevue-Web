@@ -26,16 +26,18 @@ export const FaqSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white border-b border-slate-200/80">
+    <section className="py-20 md:py-28 bg-white border-b border-neutral-100">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-3 mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/80 text-xs font-semibold text-slate-800 shadow-subtle">
+        
+        {/* Section Header */}
+        <div className="text-center space-y-3 mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 text-xs font-semibold text-neutral-800 shadow-subtle">
             <span>Questions & Answers</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-950 tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-neutral-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             Everything you need to know about Prevue, retention scoring, and store compliance.
           </p>
         </div>
@@ -46,21 +48,21 @@ export const FaqSection: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="bg-slate-50/70 rounded-xl border border-slate-200/80 shadow-subtle overflow-hidden transition-all"
+                className="bg-[#FAFAFA] rounded-2xl border border-neutral-200/80 shadow-subtle overflow-hidden transition-all"
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 focus:outline-none hover:bg-slate-50 transition-colors"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 focus:outline-none hover:bg-neutral-100/50 transition-colors"
                 >
-                  <span className="font-semibold text-slate-900 text-sm sm:text-base">{faq.q}</span>
+                  <span className="font-semibold text-neutral-950 text-sm sm:text-base">{faq.q}</span>
                   {isOpen ? (
-                    <MdExpandLess className="w-5 h-5 text-slate-600 shrink-0" />
+                    <MdExpandLess className="w-5 h-5 text-neutral-700 shrink-0" />
                   ) : (
-                    <MdExpandMore className="w-5 h-5 text-slate-400 shrink-0" />
+                    <MdExpandMore className="w-5 h-5 text-neutral-400 shrink-0" />
                   )}
                 </button>
                 {isOpen && (
-                  <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3.5 bg-white">
+                  <div className="px-5 sm:px-6 pb-6 text-xs sm:text-sm text-neutral-600 leading-relaxed border-t border-neutral-200/60 pt-4 bg-white">
                     {faq.a}
                   </div>
                 )}
@@ -68,9 +70,11 @@ export const FaqSection: React.FC = () => {
             );
           })}
         </div>
+
       </div>
     </section>
   );
 };
+
 
 

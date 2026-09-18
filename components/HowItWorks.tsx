@@ -44,16 +44,18 @@ export const HowItWorks: React.FC = () => {
   ];
 
   return (
-    <section id="how-it-works-section" className="py-16 md:py-24 bg-white border-b border-slate-200/80 scroll-mt-16">
+    <section id="how-it-works-section" className="py-20 md:py-28 bg-white border-b border-neutral-100 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center space-y-3 mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-medium text-slate-700">
-            <span className="font-mono text-[11px] text-slate-500">PRE-PRODUCTION PROTOCOL</span>
+        
+        {/* Section Header */}
+        <div className="max-w-3xl mx-auto text-center space-y-3 mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 text-xs font-semibold text-neutral-800 shadow-subtle">
+            <span className="font-mono text-[11px] text-neutral-500">PRE-PRODUCTION PROTOCOL</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-950 tracking-tight">
             How Prevue Pre-Flights Your Script
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-neutral-500 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">
             Eliminate audience drop-off in the first 30 seconds through a systematic three-stage studio review.
           </p>
         </div>
@@ -64,53 +66,57 @@ export const HowItWorks: React.FC = () => {
             return (
               <div
                 key={idx}
-                className="relative bg-slate-50/70 hover:bg-slate-50 rounded-xl p-6 sm:p-7 border border-slate-200/80 shadow-subtle flex flex-col justify-between transition-all group"
+                className="relative bg-[#FAFAFA] hover:bg-neutral-50 rounded-2xl sm:rounded-3xl p-7 sm:p-8 border border-neutral-200/80 shadow-subtle flex flex-col justify-between transition-all group"
               >
                 <div className="space-y-4">
                   {/* Top Bar: Number & Tag */}
-                  <div className="flex items-center justify-between pb-3 border-b border-slate-200/60">
-                    <span className="font-mono text-xs font-bold text-slate-400 group-hover:text-slate-900 transition-colors">
-                      {item.step}
+                  <div className="flex items-center justify-between pb-3 border-b border-neutral-200/60">
+                    <span className="font-mono text-xs font-bold text-neutral-400 group-hover:text-neutral-900 transition-colors">
+                      STAGE {item.step}
                     </span>
-                    <span className="text-[10px] font-mono font-semibold tracking-wider text-slate-500 uppercase px-2 py-0.5 rounded bg-white border border-slate-200/60">
+                    <span className="text-[10px] font-mono font-semibold tracking-wider text-neutral-500 uppercase px-2.5 py-0.5 rounded-full bg-white border border-neutral-200/80">
                       {item.tag}
                     </span>
                   </div>
 
                   {/* Icon & Title */}
-                  <div className="space-y-2">
-                    <div className="w-9 h-9 rounded-lg bg-white border border-slate-200/80 flex items-center justify-center text-slate-800 shadow-sm">
+                  <div className="space-y-2 pt-1">
+                    <div className="w-10 h-10 rounded-xl bg-white border border-neutral-200/80 flex items-center justify-center text-neutral-900 shadow-sm">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900 tracking-tight">
+                    <h3 className="text-lg font-bold text-neutral-950 tracking-tight">
                       {item.title}
                     </h3>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed">
                     {item.description}
                   </p>
 
-                  {/* Bullet points */}
-                  <ul className="space-y-2 pt-2 text-xs text-slate-600">
+                  {/* Optimized Feature Lines */}
+                  <div className="pt-2 border-t border-neutral-200/60 divide-y divide-neutral-200/50">
                     {item.details.map((detail, dIdx) => (
-                      <li key={dIdx} className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-1.5 shrink-0" />
-                        <span>{detail}</span>
-                      </li>
+                      <div key={dIdx} className="py-2.5 first:pt-1 last:pb-0 flex items-start gap-2.5 text-xs text-neutral-700">
+                        <div className="w-4 h-4 rounded-full bg-white border border-neutral-300 text-neutral-900 flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+                          <span className="text-[10px] font-bold">✓</span>
+                        </div>
+                        <span className="leading-snug">{detail}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
 
-                <div className="pt-5 mt-5 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-400 font-mono">
-                  <span>STAGE {item.step}</span>
-                  <span className="text-emerald-700 font-medium">✓ Automatic verification</span>
+                <div className="pt-5 mt-5 border-t border-neutral-200/60 flex items-center justify-between text-[11px] text-neutral-400 font-mono">
+                  <span>PROTOCOL {item.step}</span>
+                  <span className="text-emerald-700 font-medium">✓ Auto calibrated</span>
                 </div>
               </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );
 };
+

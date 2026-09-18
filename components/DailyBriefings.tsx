@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MdTrendingUp, MdCheckCircle } from 'react-icons/md';
+import { MdTrendingUp } from 'react-icons/md';
 
 export const DailyBriefings: React.FC = () => {
   const [selectedNiche, setSelectedNiche] = useState<'tech' | 'finance' | 'education'>('tech');
@@ -58,47 +58,49 @@ export const DailyBriefings: React.FC = () => {
   };
 
   return (
-    <section id="daily-briefings-section" className="py-16 md:py-24 bg-slate-50/50 border-b border-slate-200/80 scroll-mt-16">
+    <section id="daily-briefings-section" className="py-20 md:py-28 bg-[#FAFAFA] border-b border-neutral-100 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center space-y-3 mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200/80 text-xs font-semibold text-slate-800 shadow-subtle">
+        
+        {/* Section Header */}
+        <div className="max-w-3xl mx-auto text-center space-y-3 mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-neutral-200 text-xs font-semibold text-neutral-800 shadow-subtle">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
             <span>Hook Blueprint Intelligence</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-950 tracking-tight">
             Daily Retention Blueprints
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-neutral-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             Curated 0:00–0:30 hook structures designed around verified curiosity loops, high visual contrast, and immediate payoffs.
           </p>
 
-          <div className="flex items-center justify-center gap-2 pt-2">
+          <div className="flex items-center justify-center gap-2 pt-3">
             <button
               onClick={() => setSelectedNiche('tech')}
-              className={`px-3.5 py-1.5 rounded-md text-xs font-semibold transition-all ${
+              className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
                 selectedNiche === 'tech'
-                  ? 'bg-slate-900 text-white shadow-sm'
-                  : 'bg-white text-slate-600 border border-slate-200/80 hover:text-slate-900'
+                  ? 'bg-black text-white shadow-sm'
+                  : 'bg-white text-neutral-600 border border-neutral-200 hover:text-neutral-950'
               }`}
             >
               Consumer Tech
             </button>
             <button
               onClick={() => setSelectedNiche('finance')}
-              className={`px-3.5 py-1.5 rounded-md text-xs font-semibold transition-all ${
+              className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
                 selectedNiche === 'finance'
-                  ? 'bg-slate-900 text-white shadow-sm'
-                  : 'bg-white text-slate-600 border border-slate-200/80 hover:text-slate-900'
+                  ? 'bg-black text-white shadow-sm'
+                  : 'bg-white text-neutral-600 border border-neutral-200 hover:text-neutral-950'
               }`}
             >
               Finance & Markets
             </button>
             <button
               onClick={() => setSelectedNiche('education')}
-              className={`px-3.5 py-1.5 rounded-md text-xs font-semibold transition-all ${
+              className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${
                 selectedNiche === 'education'
-                  ? 'bg-slate-900 text-white shadow-sm'
-                  : 'bg-white text-slate-600 border border-slate-200/80 hover:text-slate-900'
+                  ? 'bg-black text-white shadow-sm'
+                  : 'bg-white text-neutral-600 border border-neutral-200 hover:text-neutral-950'
               }`}
             >
               Science & Education
@@ -110,49 +112,51 @@ export const DailyBriefings: React.FC = () => {
           {briefings[selectedNiche].map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl p-6 sm:p-7 border border-slate-200/80 shadow-subtle flex flex-col justify-between"
+              className="bg-white rounded-2xl sm:rounded-3xl p-7 sm:p-8 border border-neutral-200/80 shadow-subtle flex flex-col justify-between"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-bold px-2 py-0.5 rounded bg-slate-100 border border-slate-200/70 text-slate-700">
+                  <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-neutral-100 border border-neutral-200/70 text-neutral-700">
                     BLUEPRINT 0{idx + 1}
                   </span>
-                  <span className="text-xs font-mono font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded">
+                  <span className="text-xs font-mono font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200/80 px-2.5 py-0.5 rounded-full">
                     {item.hookScore}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-slate-900 leading-snug tracking-tight">
+                <h3 className="text-lg font-bold text-neutral-950 leading-snug tracking-tight">
                   "{item.title}"
                 </h3>
 
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal">
                   {item.concept}
                 </p>
 
-                <div className="p-3.5 rounded-lg bg-slate-50/80 border border-slate-200/70 space-y-1.5">
-                  <div className="text-[10px] uppercase tracking-wider font-semibold text-slate-400 font-mono">
+                <div className="p-4 rounded-xl bg-neutral-50/80 border border-neutral-200/70 space-y-1.5">
+                  <div className="text-[10px] uppercase tracking-wider font-semibold text-neutral-400 font-mono">
                     0:00–0:30 Hook Architecture
                   </div>
-                  <div className="text-xs font-mono text-slate-800 leading-relaxed">
+                  <div className="text-xs font-mono text-neutral-800 leading-relaxed">
                     {item.retentionBlueprint}
                   </div>
                 </div>
               </div>
 
-              <div className="pt-4 mt-5 border-t border-slate-100 flex items-center justify-between text-xs">
+              <div className="pt-4 mt-5 border-t border-neutral-100 flex items-center justify-between text-xs">
                 <span className="text-emerald-700 font-medium flex items-center gap-1.5 font-mono">
                   <MdTrendingUp className="w-4 h-4" />
                   {item.confidence}
                 </span>
-                <span className="text-slate-400 text-[11px] font-mono">Updated today</span>
+                <span className="text-neutral-400 text-[11px] font-mono">Updated today</span>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
 };
+
 
 
